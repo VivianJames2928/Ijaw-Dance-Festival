@@ -7,30 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ijaw Festival</title>
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/fonts/all.css" />
+    <link id="themeStyle" rel="stylesheet" href="/assets/css/light.css">
+    <link rel="stylesheet" href="resources/OwlCarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="resources/OwlCarousel/assets/owl.theme.default.min.css" >
+
   </head>
   <body>
-    <header class="bg-no-repeat bg-cover bg-center w-auto h-auto" style="background-image: url(./assets/img/bgimg.jpg);">
-      <div class="flex justify-between items-center py-2">
+    <div id="navBar" class="sticky-top flex justify-between items-center py-2"> 
         <img src="./assets/img/logo.png" alt="logo"class="w-[70px] lg:flex" />
         <nav class="hidden md:block">
           <ul class="list-none text-white inline-flex">
-            <li class=" hover:underline decoration-1 mx-3">Intro</li>
-            <li class="hover:underline decoration-1 mx-3">Countdown</li>
-            <li class="hover:underline decoration-1 mx-3">Notes</li>
-            <li class="hover:underline decoration-1 mx-3">Location</li>
-            <li class="hover:underline decoration-1 mx-3">Contact</li>
+           <a href="#intro"><li class=" hover:underline decoration-1 mx-3">Intro</li></a>
+            <a href="#countdown"><li class="hover:underline decoration-1 mx-3">Countdown</li></a>
+            <a href="#notes"><li class="hover:underline decoration-1 mx-3">Notes</li></a>
+            <a href="#location"><li class="hover:underline decoration-1 mx-3">Location</li></a>
+            <a href="#moreInfo"><li class="hover:underline decoration-1 mx-3">Contact</li></a>
           </ul>
         </nav>
+        <div class="toggleSwitch">
+          <button class="toggle" onclick="toggleMode()"><i class="fa-solid fa-toggle-on toggleon" id="toggle"></i></button>
+        </div>
+
+        <button onclick="toggleSwitch"></button>
+        
         <div class="lg:hidden">
         <i class="fa-solid fa-bars text-red-100 text-3xl mb-4"></i>
         </div>
-        <button class="hidden lg:flex bg-red-700 py-2 px-8 text-white rounded text-base">
-          <i class="fa-solid fa-phone-volume py-1"></i> Call Us
+        <button class="hidden lg:flex bg-red-700 py-2 px-8 text-white rounded text-base ">
+          <i class="fa-solid fa-phone-volume py-1"></i>Call Us
         </button>
       </div>
-      <div>
-        <p class="text-center text-[#fdac2b] font-mono italic text-base pt-12"  >imomotimi foundation presents</p>
+
+    <!-- Header Section -->
+    <header>
+    <div class="owl-carousel">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+    </div>
+    
+    <div class="navHead">
+      
+      <div class="mt-14">
+        <p class="text-center mt-28 text-[#fdac2b] font-mono italic text-base pt-12"  >imomotimi foundation presents</p>
         <h1 class="text-white font-extrabold font-serif text-3xl text-center">Imomotimi Ijaw <br />Dance Contest 2024</h1>
         <div class="text-center">
         <button class="bg-red-700 py-2 px-8  text-white rounded text-base">
@@ -45,15 +66,19 @@
       <div class="flex  justify-center pt-20  text-white motion-safe:animate-bounce md:h-3 md:mt-1">
       <i class="fa-solid fa-computer-mouse"></i>
       </div>
-
-      <img
-        class="w-full mt-5 h-[85px] pt-14 "
+       <img id="topsmoke"
+        class="w-full md:mt-14 mt-6 md:pt-36 pt-36"
         src="./assets/img/shape-top-grey-80.png"
         alt="smokes"
       />
+      </div>
     </header>
-    <section>
-      <div class="bg-[#f6f4ee] :w-auto h-80 text-center md:font-extrabold">
+        
+     
+
+    <!-- Countdown Section -->
+    <section id="countdown">
+      <div class="countdownDiv bg-[#f6f4ee] pt-[20px] w-auto h-80 text-center md:font-extrabold">
           <div class="font-sans text-black font-semibold md:text-3xl text-2xl text-center pt-8">
             <p class="mt-14">Countdown to Audition</p>
           </div>
@@ -84,8 +109,10 @@
         </div>
       </div>
     </section>
-    <section class="note">
-      <img
+
+    <!-- Note Section -->
+    <section class="note" id="notes">
+      <img id="bottomsmoke"
         class="text"
         src="./assets/img/shape-bottom-grey-80.png"
         alt="shadow"
@@ -118,8 +145,9 @@
         </div>  
       </div>
     </section>
-    <section>
-      <!-- <iframe src="https://maps.app.goo.gl/Jp1Ub9RHPUurcUobA" style="width: 100%; height: 500px;" frameborder="0"></iframe> -->
+
+    <!-- Map -->
+    <section id="location">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15853.520578161508!2d3.2885465!3d6.5995895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1727745734799!5m2!1sen!2sng"
         width="100%"
@@ -129,12 +157,14 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </section>
-    <section class="md:flex h-auto m-auto bg-[#f6f4ee] ">
+
+    <!-- Input Information -->
+    <section class="moreInfo md:flex h-auto m-auto bg-[#f6f4ee]" id="moreInfo">
         <div class="pt-16 ml-9 md:mt-[105px] ">
           <h4 class="text-[#1F0E0S] text-2xl font-serif font-bold pb-3">For More Information:</h4>
-          <p class="text-[#6F665F] pb-2"><strong>Hotlines:</strong> 07035973706 & 08108112759</p>
-          <p class="text-[#6F665F] pb-2"><strong>Email:</strong>info@ijawdancecontest.ng</p>
-          <p class="text-[#6F665F]">
+          <p class="inputtext text-[#6F665F] pb-2"><strong>Hotlines:</strong> 07035973706 & 08108112759</p>
+          <p class="inputtext text-[#6F665F] pb-2"><strong>Email:</strong>info@ijawdancecontest.ng</p>
+          <p class="inputtext text-[#6F665F]">
             <strong>Audition Location:</strong>Nitro Studio, Tamara Hall,<br>
             Otiotio Road, Yenagoa, Bayelsa State.
           </p>
@@ -150,7 +180,7 @@
             </div> 
           </div>
           <div class="md:flex md:mt-3 md:pt-5">
-            <div class="pb-6"><i class=" fa-solid fa-phone text-[#6F665F]"></i>
+            <div class="pb-6"><i class="fa-solid fa-phone text-[#6F665F]"></i>
             <input type="tel" class="outline-none border-none bg-[#f6f4ee]" placeholder="Phone"><hr class="md:mr-[-170px] mr-8"></div>
             <div class="md:pl-48 text-[#6F665F] block">
                 <i class="fa-solid fa-circle-info"></i>
@@ -166,6 +196,8 @@
           <div class="pt-6 md:mb-10"><button class=" bg-red-700 py-2 px-8  text-white rounded text-base mb-4">Get In Touch</button></div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer class="bg-[#190e08] w-auto h-72" >
       <p class="text-white text-center pt-8 pb-5 text-lg">We Are Social</p>
       <div class="text-center text-white">
@@ -177,8 +209,40 @@
       <div class="mx-3 mt-10 border-0 h-1">
       <hr class="border-[#3d2113]"/>
       </div>
-      <p class="text-white text-center">© 2024 Imomotimi Foundation.</p>
-      <p class="text-white text-center">Rights Reserved</p>
+      <p class="text-white text-center">© 2024 Imomotimi Foundation. All Rights Reserved</p>
+
+      <!-- Scroll To Top Button -->
+      <button id="arrow" class="ml-[550px] md:ml-[1200px] animate-bounce"><i class="fa-solid fa-arrow-up"></i></button>
     </footer>
+    
+    <script src="assets/js/main.js"></script>
+    <script src="resources/jquery-3.7.1.min.js"></script>
+    <script src="resources/OwlCarousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        item:1,
+        loop:true,
+        nav:false,
+        dots:false,
+        autoplay:true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+
+        responsive:{
+          0: {
+            items:1
+          },
+          600:{
+            items:1
+          },
+          1000:{
+            items:1
+          }
+        }
+      });
+      });
+    </script>
   </body>
 </html>
